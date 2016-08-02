@@ -1,0 +1,28 @@
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+.dataTables_wrapper {
+    width: 100%;
+}
+
+.mdl-data-table th {
+    white-space: pre-wrap;
+}
+
+.geekdiv-card-updates .mdl-card__supporting-text {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.fingeek-info {
+    max-height: 220px;
+}
+
+.fingeek-dividends-agreed {
+    color: #4db6ac;
+}
