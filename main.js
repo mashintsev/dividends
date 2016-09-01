@@ -17,7 +17,7 @@ $(document).ready(function() {
                     $tr.each(function(idx, el) {
                         var price = symbolData['LAST'] || symbolData['OPEN'];
                         $(el).find('.fingeek-dividends-price-col').text(price);
-                        $(el).find('.fingeek-dividends-name-col').text(securityDataArr[i]['SECNAME']);
+                        $(el).find('.fingeek-dividends-name-col').text(securityDataArr[i]['SECNAME'] + ' (' + symbolData['SECID'] + ')');
                         var dividend = $(el).find('.fingeek-dividends-div-col').text();
                         $(el).find('.fingeek-dividends-profit-col').text(Math.round(dividend / price * 100 * 100) / 100 + '%');
                     });
