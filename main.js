@@ -15,10 +15,11 @@ $(document).ready(function() {
                 if (tableSymbols[symbolData['SECID']]) {
                     var $tr = $('tr[data-symbol=' + symbolData['SECID'] + ']');
                     $tr.each(function(idx, el) {
-                        $(el).find('.fingeek-dividends-price-col').text(symbolData['LAST']);
+                        var price = symbolData['LAST'] || symbolData['OPEN'];
+                        $(el).find('.fingeek-dividends-price-col').text(price);
                         $(el).find('.fingeek-dividends-name-col').text(securityDataArr[i]['SECNAME']);
                         var dividend = $(el).find('.fingeek-dividends-div-col').text();
-                        $(el).find('.fingeek-dividends-profit-col').text(Math.round(dividend / symbolData['LAST'] * 100 * 100) / 100 + '%');
+                        $(el).find('.fingeek-dividends-profit-col').text(Math.round(dividend / price * 100 * 100) / 100 + '%');
                     });
                 }
             }
